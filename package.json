@@ -2,10 +2,10 @@
   "name": "vite-react-template",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "commit": "git cz",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "prepare": "husky install"
@@ -15,11 +15,16 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.7.1",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "@vitejs/plugin-react-swc": "^3.3.2",
+    "commitizen": "^4.3.0",
+    "commitlint-config-cz": "^0.13.3",
+    "commitlint-config-gitmoji": "^2.3.1",
+    "cz-customizable": "^7.0.0",
     "eslint": "^8.45.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-react-hooks": "^4.6.0",
@@ -44,5 +49,10 @@
     "**/*.{css,scss}": [
       "stylelint --fix"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
   }
 }
