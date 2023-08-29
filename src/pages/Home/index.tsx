@@ -1,9 +1,16 @@
-import { useState } from "react";
 import reactLogo from "@/assets/react.svg";
-import viteLogo from "/vite.svg";
+import { increment } from "@/store/counter";
+import useAppDispatch from "@/utils/hooks/useAppDispatch";
+import useAppSelector from "@/utils/hooks/useAppSelect";
 import { Link } from "react-router-dom";
+import viteLogo from "/vite.svg";
 const Home = () => {
-  const [count, setCount] = useState(0);
+  const { value } = useAppSelector((state) => state.counter);
+  const dispatch = useAppDispatch();
+
+  const incrementHandler = () => {
+    dispatch(increment());
+  };
 
   return (
     <>
@@ -17,12 +24,10 @@ const Home = () => {
       </div>
       <h1>Vite + React</h1>
       <div>
-        Router Test: <Link to="/test">Test</Link>
+        Router Test: <Link to="/pokemon">Pokemon</Link>
       </div>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+        <button onClick={incrementHandler}>count is {value}</button>
       </div>
     </>
   );

@@ -1,11 +1,16 @@
-import Home from "../pages/Home";
-import Test from "../pages/Test";
+import Home from "@/pages/Home";
+import Pokemon from "@/pages/Pokemon";
+import { PokemonDetail } from "@/pages/PokemonDetail";
 
 const routerConfig = [
   { path: "/", element: <Home /> },
   {
-    path: "/test",
-    element: <Test />,
+    path: "/pokemon",
+    element: <Pokemon />,
+  },
+  {
+    path: "/pokemon/:name",
+    element: <PokemonDetail />,
   },
 ];
 
