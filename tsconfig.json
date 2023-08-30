@@ -5,6 +5,8 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
+    "allowJs": false, // 是否允許 javascript
+    "types": ["vitest/globals", "@testing-library/jest-dom/vitest"],
 
     /* Bundler mode */
     "moduleResolution": "bundler",
