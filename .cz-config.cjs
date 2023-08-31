@@ -43,7 +43,8 @@ module.exports = {
   // 配置 scope 可選的選項，限制只能提交以下範圍
   // scopes: ['global', 'scope1', 'scope2'],
 
-  usePreparedCommit: true, // to re-use commit from ./.git/COMMIT_EDITMSG
+  // to re-use commit from ./.git/COMMIT_EDITMSG
+  // usePreparedCommit: true, 
 
   // 每一步的提示信息
   messages: {
