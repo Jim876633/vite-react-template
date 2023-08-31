@@ -78,4 +78,12 @@ npm run commit
 
 ### Deploy
 
-If use github-page to deploy just push the code to github and enable github-page in setting.
+If use **github-page** to deploy just push the code to github and enable github-page use **GitHub Actions** in setting.
+
+![Github Action](/public/github-action.png)
+
+And change the baseUrl in src/constants/index.ts to your repo name
+
+```ts
+export const baseUrl = "your-repo-name";
+```
