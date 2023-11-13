@@ -26,6 +26,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    if: ${{ !startsWith(github.event.head_commit.message , ':page_facing_up:')}}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
