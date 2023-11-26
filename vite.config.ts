@@ -8,6 +8,20 @@ import { baseUrl } from "./src/constants";
 export default defineConfig({
   plugins: [react(), tsconfigPaths()],
   base: process.env.NODE_ENV === "production" ? baseUrl : "/", // for github pages setting base path
+  css: {
+    preprocessorOptions: {
+      scss: {
+        // global sass variables and mixins
+        additionalData: `@import "@styles/_variables.scss";@import "@styles/_mixins.scss";`,
+      },
+    },
+  },
+  resolve: {
+    alias: {
+      "@styles": "/src/utils/styles",
+      "@img": "/src/assets/img",
+    },
+  },
   test: {
     globals: true,
     environment: "jsdom",

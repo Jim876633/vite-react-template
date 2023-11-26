@@ -2,6 +2,7 @@
   "extends": ["stylelint-config-standard", "stylelint-config-standard-scss"],
   "plugins": ["stylelint-order"],
   "rules": {
+    "property-no-vendor-prefix": null,
     "color-hex-length": "long",
     "order/properties-order": [
       "position",
